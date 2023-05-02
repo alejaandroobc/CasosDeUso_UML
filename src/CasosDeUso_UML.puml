@@ -1,17 +1,17 @@
 @startuml
-:NewActor:
-usecase "Identificarse" as UC1
-usecase "Pagar" as UC2
-usecase "Elegir mensajero" as UC3
-usecase "Confirmar" as UC4
-usecase "Registrarse" as UC5
-usecase "Pagar con tarjeta" as UC6
-usecase "Pagar con transferencia" as UC7
-NewActor -- UC1
-NewActor -- UC2
-NewActor -- UC3
-NewActor --UC4
-UC1 <.. UC5 : <<extend>>
-UC2 <|-- UC6
-UC2 <|--UC7
+:Usuario:
+:Administrador:
+usecase "Inicio sesion" as UC1
+usecase "Recuperar contraseña" as UC2
+usecase "Modificar contraseña" as UC3
+usecase "Cerrar sesion" as UC4
+usecase "Registrar usuario" as UC5
+usecase "Instalar programa" as UC6
+Usuario -- UC1
+Usuario -- UC2
+Usuario -- UC3
+Usuario --UC4
+Usuario <|-- Administrador
+Administrador -- UC5
+Administrador -- UC6
 @enduml
