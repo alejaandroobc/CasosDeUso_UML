@@ -1,7 +1,9 @@
 @startuml
-usecase "Pagar" as UC1
-usecase "Pagar con tarjeta" as UC2
-usecase "Pagar en efectivo" as UC3
-UC1 <|-- UC3
-UC1 <|-- UC2
+:Cliente:
+:ClienteVIP:
+usecase "Reservar vuelo" as UC1
+usecase "Elegir asientos" as UC2
+Cliente <|-- ClienteVIP
+Cliente -- UC1
+ClienteVIP -- UC2
 @enduml
