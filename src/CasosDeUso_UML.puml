@@ -1,9 +1,14 @@
 @startuml
 :Cliente:
-:ClienteVIP:
-usecase "Reservar vuelo" as UC1
-usecase "Elegir asientos" as UC2
-Cliente <|-- ClienteVIP
+usecase "Meter dinero" as UC1
+usecase "Pedir azucar" as UC2
+usecase "Pedir Producto" as UC3
+usecase "Cancelar" as UC4
+usecase "Devolver dinero" as UC5
 Cliente -- UC1
-ClienteVIP -- UC2
+Cliente -- UC2
+Cliente -- UC3
+Cliente --UC4
+UC3 ..> UC5 :<<include>>
+UC4 ..> UC5 :<<include>>
 @enduml
