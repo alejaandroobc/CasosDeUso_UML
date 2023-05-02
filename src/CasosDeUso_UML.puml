@@ -1,17 +1,10 @@
 @startuml
-:Usuario:
-:Administrador:
-usecase "Inicio sesion" as UC1
-usecase "Recuperar contraseña" as UC2
-usecase "Modificar contraseña" as UC3
-usecase "Cerrar sesion" as UC4
-usecase "Registrar usuario" as UC5
-usecase "Instalar programa" as UC6
-Usuario -- UC1
-Usuario -- UC2
-Usuario -- UC3
-Usuario --UC4
-Usuario <|-- Administrador
-Administrador -- UC5
-Administrador -- UC6
+:Ciudadano:
+:Ciudadano extranero: as CiuEx
+usecase "Registrar entrada" as UC1
+usecase "Tomar huellas" as UC2
+Ciudadano <|-- CiuEx
+Ciudadano -- UC1
+CiuEx -- UC2
+UC1 <.. UC2 : <<extend>
 @enduml
