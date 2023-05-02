@@ -1,3 +1,5 @@
 @startuml
-usecase "Mostrar Menú"
+:Cliente:
+usecase "Mostrar Menú" as UC1
+Cliente --> UC1
 @enduml
