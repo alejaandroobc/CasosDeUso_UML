@@ -1,5 +1,13 @@
 @startuml
 :Cliente:
+:Restaurante:
+rectangle {
 usecase "Mostrar Menú" as UC1
-Cliente --> UC1
+usecase "Pedir comida" as UC2
+}
+usecase "Entregar comida" as UC3
+Cliente -- UC1
+Cliente -- UC2
+Restaurante -- UC1
+Restaurante -- UC3
 @enduml
