@@ -1,11 +1,5 @@
 @startuml
-:Cliente:
-usecase "Confirmar pedido" as UC1
-usecase "Cancelar pedido" as UC2
-usecase "Devolver cambio" as UC3
-Cliente -- UC1
-Cliente -- UC2
-UC1 ..> UC3 : <<Include>>
-UC2 ..> UC3 : <<Include>>
-
+usecase "Acceder" as UC1
+usecase "Registrarse" as UC3
+UC1 <.. UC3 : <<extend>>
 @enduml
