@@ -1,14 +1,17 @@
 @startuml
-:Cliente:
-usecase "Meter dinero" as UC1
-usecase "Pedir azucar" as UC2
-usecase "Pedir Producto" as UC3
-usecase "Cancelar" as UC4
-usecase "Devolver dinero" as UC5
-Cliente -- UC1
-Cliente -- UC2
-Cliente -- UC3
-Cliente --UC4
-UC3 ..> UC5 :<<include>>
-UC4 ..> UC5 :<<include>>
+:NewActor:
+usecase "Identificarse" as UC1
+usecase "Pagar" as UC2
+usecase "Elegir mensajero" as UC3
+usecase "Confirmar" as UC4
+usecase "Registrarse" as UC5
+usecase "Pagar con tarjeta" as UC6
+usecase "Pagar con transferencia" as UC7
+NewActor -- UC1
+NewActor -- UC2
+NewActor -- UC3
+NewActor --UC4
+UC1 <.. UC5 : <<extend>>
+UC2 <|-- UC6
+UC2 <|--UC7
 @enduml
