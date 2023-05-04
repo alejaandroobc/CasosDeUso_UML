@@ -1,10 +1,9 @@
 @startuml
-:Ciudadano:
-:Ciudadano extranero: as CiuEx
-usecase "Registrar entrada" as UC1
-usecase "Tomar huellas" as UC2
-Ciudadano <|-- CiuEx
-Ciudadano -- UC1
-CiuEx -- UC2
-UC1 <.. UC2 : <<extend>
+usecase UC1 as"Sacar dinero
+--
++ solicitud hecha"
+usecase "Retener tarjeta" as UC2
+note "Description\n--\ncondición:\n {historia sospechosa}\npunto de extensión:\n solicitud hecha" as N1
+(UC1).. N1
+N1 .. (UC2) : <<extend>>
 @enduml
